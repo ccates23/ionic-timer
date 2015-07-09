@@ -1,4 +1,9 @@
 angular.module("starter")
   .controller("TimerCtrl", ['$scope', function($scope) {
-    $scope.display = 0;
+   var _val = 0;
+   $scope.timer = {
+   	val: function(newVal){
+   		return arguments.length ? (_val = newVal) : _val;
+   	}
+   };
   }]);

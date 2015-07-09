@@ -31,13 +31,13 @@
       <ion-content>
         <div class="row">
           <div class="col">
-            <h1>{{display}}</h1>
+            <h1 ng-bind ="timer.val()"></h1>
           </div>
         </div>
         <div class="row">
           <div class="col">
             <div class="item range">
-              <input type="range" name="timer">
+              <input type="range" min="0" max="60" ng-model="timer.val"  ng-model-options="{getterSetter: true}" name="timer">
               <i class="icon ion-clock"></i>
             </div>
           </div>
